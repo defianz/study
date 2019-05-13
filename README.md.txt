@@ -1,4 +1,5 @@
 - blog URL : https://defian.tistory.com/
+ > R, JAVA, OS etc..
 
 [ History for my task ] 
 
