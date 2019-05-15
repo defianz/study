@@ -1,5 +1,5 @@
 ## Defian's Property
-- blog URL : [https://defian.tistory.com/]
+- blog URL : [데피앙의 티스토리](https://defian.tistory.com/)
  > R, JAVA, OS etc..
 
 [ History for my task ] 
@@ -13,3 +13,22 @@ int main(void){
   return 0;
 }
 ```
+
+* 깃 듀토리얼
+  * 깃 Clone
+  * 깃  pull
+    * 깃 commit1)
+  
+  인용구문
+  > '공부합시다'
+  
+  테이블은 다음과 같이 작성
+  
+  이름|영어|정보|수학
+  ---|---|---|---|
+  나동빈|98점|10점|40점|\
+  
+  
+  강조는 다음과 같이
+  
+  **치킨** 먹고싶다.
