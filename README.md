@@ -1,15 +1,15 @@
 ## Defian's Property
-###- blog URL : [https://defian.tistory.com/]
-### > R, JAVA, OS etc..
+- blog URL : [https://defian.tistory.com/]
+ > R, JAVA, OS etc..
 
-##[ History for my task ] 
+[ History for my task ] 
 
 > 2019-05-12 defian's github open for public
 
-'''c
+```c
 #include <stdio.h>
 int main(void){
   printf("Helloworld!");
   return 0;
 }
-'''
+```
