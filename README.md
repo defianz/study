@@ -5,6 +5,14 @@
 [ History for my task ] 
 
 > 2019-05-12 defian's github open for public
+> 2019-05-13~16   tutorial test
+> 2019-05-17 Clear this repository
+
+
+
+
+
+below is for making md files easily.
 
 ```c
 #include <stdio.h>
