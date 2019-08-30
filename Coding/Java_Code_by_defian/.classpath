@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="Hyundai_AI_Test_190705/src"/>
-	<classpathentry kind="src" path="JAVA_Code_by_defian/src"/>
-	<classpathentry kind="output" path="Hyundai_AI_Test_190705/bin"/>
-</classpath>
