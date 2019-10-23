@@ -50,9 +50,8 @@ int main(){
 
 	sort(v.begin(), v.end());
 
-	deque<tree> alive;
+	
 	queue<tree> dead;
-	deque<tree> fyear;
 
 	while (k--){
 
@@ -70,7 +69,7 @@ int main(){
 		//}
 		//printf("\n");
 
-		
+		deque<tree> alive;
 
 
 		//봄 시작
@@ -85,7 +84,16 @@ int main(){
 				maps[x][y] -= ag;
 				v[i].age++;
 				alive.push_back(v[i]);
-				if (v[i].age % 5 == 0) fyear.push_back(v[i]);
+
+				if (v[i].age % 5 == 0){
+					for (int dir = 0; dir < 8; dir++){  
+						int nr = v[i].r + dr[dir];
+						int nc = v[i].c + dc[dir];
+						if (1 <= nr && nr <= n && 1 <= nc && nc <= n){
+							alive.push_front(tree{ 1, nr, nc });
+						}
+					}
+				}
 			}
 			else{
 				dead.push(v[i]);
@@ -99,7 +107,7 @@ int main(){
 			int y = dead.front().c;
 			int ag = dead.front().age;
 			dead.pop();
-			maps[x][y] += ag / 2;
+			maps[x][y] += (ag / 2);
 		}
 		// 여름 끝
 
@@ -115,7 +123,7 @@ int main(){
 
 
 		// 가을 시작
-		for (int i = 0; i < fyear.size(); i++){
+		/*for (int i = 0; i < fyear.size(); i++){
 			for (int dir = 0; dir < 8; dir++){
 				int nr = fyear[i].r + dr[dir];
 				int nc = fyear[i].c + dc[dir];
@@ -124,7 +132,7 @@ int main(){
 				}
 			}
 		}
-
+*/
 		// 가을 끝
 
 		// 겨울
@@ -136,8 +144,6 @@ int main(){
 		// 겨울 끝
 
 		v = alive;
-		alive.clear();
-		fyear.clear();
 
 	}
 	//printf("k년 %d\n", k);

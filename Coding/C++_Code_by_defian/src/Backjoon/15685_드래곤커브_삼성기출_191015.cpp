@@ -27,8 +27,8 @@ void makecurve(int y, int x, int gen, int cnt){
 	} 
 	int tmp = dirs.size();
 	//printf("%d \n", tmp);
-	int tmp2 = 0;
-	if (cnt != 0) tmp2 = pow(2, cnt - 1);
+	//int tmp2 = 0;
+	//if (cnt != 0) tmp2 = pow(2, cnt - 1);
 	for (int i = tmp - 1; i >= 0; i--){
 		//printf("%d dir´Â \n", dirs[i]);
 		int ndir = (dirs[i] + 1)%4;

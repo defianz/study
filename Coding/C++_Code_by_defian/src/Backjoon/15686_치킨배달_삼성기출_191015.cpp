@@ -14,7 +14,7 @@ int n, m;
 vector<pair<int, int>> c;
 vector<pair<int, int>> v;
 pair<int, int> choose[2501];
-bool visited[2501];
+//bool visited[2501];
 
 void bp(int start, int cnt){
 	if (cnt == m){
@@ -32,12 +32,12 @@ void bp(int start, int cnt){
 
 
 	for (int i = start; i < v.size(); i++){
-		if (visited[i] == false){
-			visited[i] = true;
+		/*if (visited[i] == false){
+			visited[i] = true;*/
 			choose[cnt] = v[i];
 			bp(i+1,cnt+1);
-			visited[i] = false;
-		}
+			//visited[i] = false;
+		
 	}
 
 }

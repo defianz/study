@@ -15,14 +15,14 @@ int dx[4] = { 0, 1, 0, -1 };
 
 
 
-void bp(int cnt, int dir, pair<int, int> rball, pair<int, int>bball){
+void bp(int cnt, int dir, pa ir<int, int> rball, pair<int, int>bball){
 	if (cnt > 10) return;
 	//printf("여기까지?");
 
 	bool flagr = false;
 	bool flagb = false;
 	//cout << "cnt값은 " << cnt << "\n";
-	if ((rball.first + dy[dir]) == bball.first && (rball.second + dx[dir] )== bball.second){
+	if ((rball.first + dy[dir]) == bball.first && (rball.second + dx[dir]) == bball.second){
 		// 파란공 돌리기
 		while (true){
 			/*	cout << "무한루프 파란공" << "\n";
