@@ -1,5 +1,5 @@
 ﻿## Defian's Property
-- blog URL : [데피앙의 티스토리](https://defian.tistory.com/)
+- blog URL : [데피안의 티스토리](https://defian.tistory.com/)
  > R, JAVA, OS etc..
 
 [ History for my task ] 
