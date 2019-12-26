@@ -16,10 +16,6 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
 
-# image
-game_folder = os.path.dirname(__file__)
-img_folder = os.path.join(game_folder, "img")
-
 # initialize pygame and create window
 pygame.init()
 pygame.mixer.init()
