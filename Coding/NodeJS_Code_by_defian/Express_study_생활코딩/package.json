@@ -23,6 +23,8 @@
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "nsp": "^3.2.1",
     "sanitize-html": "^1.21.1"
   }
 }
