@@ -6,15 +6,40 @@ var template = require('./lib/template.js');
 var qs = require('querystring')
 var bodyParser = require("body-parser");
 var compression = require("compression");
-var topicRouter = require('./routes/topic');
-var indexRouter = require('./routes/index');
+
 var helmet = require('helmet')
+var session = require('express-session')
+var FileSotre = require('session-file-store')(session)
+var flash = require('connect-flash')
 
 app.use(helmet());
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(compression());
+app.use(session({
+  secret: 'asdfjnaskdfnj',
+  resave: false,
+  saveUninitialized: true,
+  store: new FileSotre()
+}))
+app.use(flash());
+
+app.get('/flash', function (req, res) {
+  req.flash('msg', 'Flash is back!')
+  res.send("flash")
+})
+
+app.get('/flash-display', function (req, res) {
+  var fmsg = req.flash();
+  res.send(fmsg);
+  // res.render('index', { message: req.flash('info') });
+})
+
+
+var passport = require('./lib/passport')(app);
+
+
 app.get('*', function (request, response, next) {
   fs.readdir('./data', function (error, filelist) {
     request.list = filelist;
@@ -22,12 +47,13 @@ app.get('*', function (request, response, next) {
   })
 })
 
+var topicRouter = require('./routes/topic');
+var indexRouter = require('./routes/index');
+var authRouter = require('./routes/auth')(passport);
 
 app.use('/', indexRouter);
 app.use('/topic', topicRouter);
-
-// route, routing
-// app.get('/', (req, res) => res.send("Hello World!"))
+app.use('/auth', authRouter);
 
 
 app.use(function (request, response) {
@@ -40,41 +66,3 @@ app.use(function (err, req, res, next) {
 })
 
 app.listen(3000, () => console.log("Example app listening on port 3000"))
-
-
-/*
-var http = require('http');
-var fs = require('fs');
-var url = require('url');
-var qs = require('querystring');
-var template = require('./lib/template.js');
-var path = require('path');
-var sanitizeHtml = require('sanitize-html');
-
-var app = http.createServer(function(request,response){
-    var _url = request.url;
-    var queryData = url.parse(_url, true).query;
-    var pathname = url.parse(_url, true).pathname;
-    if(pathname === '/'){
-      if(queryData.id === undefined){
-
-      } else {
-
-      }
-    } else if(pathname === '/create'){
-    } else if(pathname === '/create_process'){
-
-    } else if(pathname === '/update'){
-
-    } else if(pathname === '/update_process'){
-
-    } else if(pathname === '/delete_process'){
-
-    } else {
-      response.writeHead(404);
-      response.end('Not found');
-    }
-});
-app.listen(3000);
-*/
-

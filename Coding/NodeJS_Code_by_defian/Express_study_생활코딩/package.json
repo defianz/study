@@ -22,9 +22,14 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
     "helmet": "^3.21.2",
     "nsp": "^3.2.1",
-    "sanitize-html": "^1.21.1"
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sanitize-html": "^1.21.1",
+    "session-file-store": "^1.4.0"
   }
 }
