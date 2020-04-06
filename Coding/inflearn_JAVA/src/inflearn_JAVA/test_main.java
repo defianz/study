@@ -46,19 +46,46 @@ public class test_main {
 //		c1.method2();
 //		
 //		int[] c2 = new int[5];
+//		
+//		try {
+//			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//			int kor1,kor2,kor3;
+//			int eng1,eng2,eng3;
+//			int mat1,mat2,mat3;
+//			
+//			System.out.println();
+//			
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//		}
+//		
 		
+		
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Integer.MIN_VALUE);
+		System.out.println(Float.MAX_VALUE);
+		System.out.println(Float.MIN_VALUE);
+		
+		Integer intClass = new Integer(100);
+		int intValue = intClass.intValue();
+		System.out.println(intValue);
+		Runtime run = Runtime.getRuntime();
 		try {
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			int kor1,kor2,kor3;
-			int eng1,eng2,eng3;
-			int mat1,mat2,mat3;
-			
-			System.out.println();
-			
+//			run.exec("explorer.exe http://www.naver.com");
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-//		
+		System.out.println(run.totalMemory());
+		
+		
+		String str1 = "이건 뭐지";
+		String str2 = "이건 뭐지";
+		String str3 = new String("이건 뭐지");
+		if(str1==str3) {
+			System.out.println("같음");
+		} else {
+			System.out.println("다름");
+		}
 	}
 
 }
