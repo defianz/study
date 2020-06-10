@@ -46,7 +46,7 @@
   for (const a of map.keys()) log(a);
   for (const a of map.values()) log(a);
   for (const a of map.entries()) log(a);
-  console.clear();
+  // console.clear();
 </script>
 
 ## 이터러블/이터레이터 프로토콜
@@ -62,7 +62,7 @@
       let i = 3;
       return {
         next() {
-          return i == 0 ? {done: true} : {value: i--, done: false};
+          return i == 0 ? { done: true } : { value: i--, done: false };
         },
         [Symbol.iterator]() {
           return this;
@@ -95,7 +95,7 @@
 ## 전개 연산자
 
 <script>
-  console.clear();
+  // console.clear();
   const a = [1, 2];
   // a[Symbol.iterator] = null;
   log([...a, ...arr, ...set, ...map.keys()]);
