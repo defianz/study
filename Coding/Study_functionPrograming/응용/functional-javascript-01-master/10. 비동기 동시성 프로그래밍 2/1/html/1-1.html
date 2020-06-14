@@ -65,22 +65,40 @@
     L.filter(a => Promise.resolve(a % 2)),
     reduce(add)/*,
     log*/);
+
+
+
+  var test = function (f) {
+    new Promise(resolve => {
+      return resolve(1);
+    })
+  }
 </script>
 
+
 <script>
+  // go([1, 2, 3, 4, 5, 6, 7, 8],
+  //   L.map(a => {
+  //     log(a);
+  //     return new Promise(resolve => setTimeout(() => resolve(a * a), 1000))
+  //   }),
+  //   L.filter(a => {
+  //     log(a);
+  //     return new Promise(resolve => setTimeout(() => resolve(a % 2), 1000))
+  //   }),
+  //   take(2),
+  //   reduce(add),
+  //   log);
+
   go([1, 2, 3, 4, 5, 6, 7, 8],
     L.map(a => {
       log(a);
-      return new Promise(resolve => setTimeout(() => resolve(a * a), 1000))
-    }),
-    L.filter(a => {
-      log(a);
-      return new Promise(resolve => setTimeout(() => resolve(a % 2), 1000))
-    }),
-    take(2),
-    reduce(add),
-    log);
+      return new Promise(resolve => setTimeout(() => {
+        resolve(a * a);
+      }, 1000))
+    })
+    , a => [...a]
+    , reduce(add)
+    , log
+  )
 </script>
-
-
-

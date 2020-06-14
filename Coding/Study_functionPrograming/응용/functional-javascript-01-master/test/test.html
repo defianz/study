@@ -1,0 +1,19 @@
+<script>
+    var test = function (f) {
+        console.log(f);
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve(f(10));
+            }, 1000);
+            console.log("Promise안")
+        })
+    }
+
+    console.log("시작")
+    test(a => a + 10).then((res) => {
+        console.log(res);
+        console.log("이거는 어떻게 진행되는거냐");
+    }).then(console.log("settimeout끝남"))
+    console.log("끝")
+
+</script>
