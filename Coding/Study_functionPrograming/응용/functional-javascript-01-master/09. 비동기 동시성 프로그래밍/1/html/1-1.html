@@ -19,9 +19,20 @@
 
   // log(a);
 
+  function add40(a) {
+    return new Promise(function (resolve) {
+      setTimeout(function () {
+        resolve(a + 40)
+      }, 1000)
+    })
+  }
+  add40(50).then(log);
+
   function add20(a) {
     return new Promise(resolve => setTimeout(() => resolve(a + 20), 100));
   }
+
+
 
   var b = add20(5)
     .then(add20)
@@ -29,6 +40,52 @@
   // .then(log);
 
   // log(b);
+
+
+  console.clear();
+
+
+  // function test2(a, f) {
+  //   setTimeout(() => {
+  //     a = a + 1;
+  //     f(a + "test 2 타임아웃 안에");
+  //   }, 1000);
+  //   f(a + "test2입니다");
+  // }
+
+  // test2(10, log)
+
+  // function test(a) {
+  //   a = a + 1;
+  //   setTimeout(() => {
+  //     console.log(a + "test 타임아웃 안에");
+  //   }, 1000);
+  //   return new Promise(resolve => {
+  //     resolve(a + "test입니다");
+  //   })
+  // }
+
+  // test(10).then(log);
+
+  console.clear();
+
+  const go2 = (a, f) => a instanceof Promise ? a.then(f) : f(a);
+  const add52 = a => a + 5;
+
+
+  const delay1002 = a => new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(a)
+    }, 100);
+  })
+
+
+  var r = go2(10, add52);
+  log("R은" + r);
+  var r2 = go2(delay1002(10), add52);
+  r2.then(log)
+
+
 </script>
 
 ## 일급 활용
@@ -37,7 +94,7 @@
   const delay100 = a => new Promise(resolve =>
     setTimeout(() => resolve(a), 100));
 
-  const go1 = (a, f) => a instanceof Promise ? a.then(f) : f(a);
+  // const go1 = (a, f) => a instanceof Promise ? a.then(f) : f(a);
   const add5 = a => a + 5;
 
   const n1 = 10;
@@ -76,15 +133,15 @@
   // f(g(x)) = g(x)
 
   var users = [
-    {id: 1, name: 'aa'},
-    {id: 2, name: 'bb'},
-    {id: 3, name: 'cc'}
+    { id: 1, name: 'aa' },
+    { id: 2, name: 'bb' },
+    { id: 3, name: 'cc' }
   ];
 
   const getUserById = id =>
     find(u => u.id == id, users) || Promise.reject('없어요!');
 
-  const f = ({name}) => name;
+  const f = ({ name }) => name;
   const g = getUserById;
 
   // const fg = id => f(g(id));
@@ -99,5 +156,3 @@
     fg(2).then(log);
   }, 10);
 </script>
-
-
