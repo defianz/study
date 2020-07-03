@@ -37,6 +37,24 @@
 ## QnA. Array.prototype.map이 있는데 왜 FxJS의 map 함수가 필요한지?
 
 <script>
+
+  console.clear();
+  log("형철 test");
+
+  function test(a) {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        resolve(a);
+      }, 100);
+    })
+  }
+  function test2() {
+    const list2 = [1, 2, 3, 4];
+    const temp = list2.map(a => test(a * a));
+    log(temp);
+  }
+  log("끝");
+
   function delayI(a) {
     return new Promise(resolve => setTimeout(() => resolve(a), 100));
   }
