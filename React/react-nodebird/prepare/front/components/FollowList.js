@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import { List, Button, Card } from 'antd';
 import { StopOutlined } from '@ant-design/icons';
 import PropType from 'prop-types';
 
 const FollowList = ({ header, data }) => {
 
+    const style = useMemo(()=>({marginBottom:20}),[]);
     return (
         <List
-            style={{ marginBottom: 20 }}
+            style={style}
             grid={{ gutter: 4, xs: 2, md: 3 }}
             size="small"
             header={<div>{header}</div>}
