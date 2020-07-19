@@ -2,8 +2,10 @@ import React, { useCallback, useState, useMemo } from 'react';
 import { Form, Input, Button } from 'antd';
 import Link from 'next/link'
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+
 import useinput from '../hooks/useinput';
+import { loginAction } from '../reducers/user';
 
 const ButtonWrapper = styled.div`
     margin-top:10px;
@@ -15,14 +17,14 @@ const FormWrapper = styled(Form)`
 
 // const style = useMemo(() => ({ marginTop: 10 }), []);
 
-const LoginForm = ({ setIsLoggedIn }) => {
-
-    const [id,onChangeId] = useinput('');
+const LoginForm = () => {
+    const dispatch = useDispatch();
+    const [id, onChangeId] = useinput('');
     const [password, onChangePassword] = useinput('');
 
     const onSubmitForm = useCallback((e) => {
         console.log(id, password);
-        setIsLoggedIn(true);
+        dispatch(loginAction({ id, password }));
     }, [id, password]);
 
     return (
@@ -50,10 +52,5 @@ const LoginForm = ({ setIsLoggedIn }) => {
         </FormWrapper>
     );
 }
-
-
-LoginForm.prototype = {
-    setIsLoggedIn : PropTypes.func.isRequired,
-};
 
 export default LoginForm;
