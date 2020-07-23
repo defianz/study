@@ -45,7 +45,7 @@ const dummyPost = {
         id: 1,
         nickname: '데피안',
     },
-    Image: [],
+    Images: [],
     Comments: [],
 }
 

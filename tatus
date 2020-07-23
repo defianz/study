@@ -1,0 +1,841 @@
+[33mcommit c9222e7ffdf3112806a4d65c2078f61491171ee4[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Defian <iautm91@gmail.com>
+Date:   Thu Jul 23 17:00:27 2020 +0900
+
+    react study
+
+[33mcommit 581d1bd2d28e25ac9e3a8099c25410c279756b13[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sun Jul 19 17:11:37 2020 +0900
+
+    algorithm study
+
+[33mcommit 7e2a160e0b50ef59ba74d6b56733979b5e89aa96[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sun Jul 19 14:54:41 2020 +0900
+
+    React Study
+
+[33mcommit 987772df8c39864a08d5864bd2e1fecd988fbf00[m
+Author: Defian <iautm91@gmail.com>
+Date:   Thu Jul 16 22:07:08 2020 +0900
+
+    React study - redux
+
+[33mcommit 1160739823cad85ea3ca427e9486e20b5c9fe028[m
+Author: Defian <iautm91@gmail.com>
+Date:   Thu Jul 16 20:18:37 2020 +0900
+
+    backjoon algorithm study
+
+[33mcommit c5424ea59427cbe18acf24420fd5215a0c3df2a2[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sun Jul 12 18:33:48 2020 +0900
+
+    react study - node bird
+
+[33mcommit 8805bc94605701b9c55d78cd04acbb7559e01b92[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sun Jul 12 13:36:08 2020 +0900
+
+    Algorithm Study 200712
+
+[33mcommit 39f9f9e7ab4ebdb88c6c78382693adadb80de004[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sat Jul 11 16:20:16 2020 +0900
+
+    CountingSort 및 백준 문제풀이
+
+[33mcommit e5867900e6be89866bfbc78792e77b71dc9d4266[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sat Jul 11 12:24:12 2020 +0900
+
+    quickSort, Swap
+
+[33mcommit c068c7971abf5c265d8e1691184f201dba8a79b8[m
+Author: Defian <iautm91@gmail.com>
+Date:   Fri Jul 10 00:02:46 2020 +0900
+
+    Algorithm Study_20200710
+
+[33mcommit 7b5deb4d1c9b3040d47284d6fde4fb1bf9ffb522[m
+Author: Defian <iautm91@gmail.com>
+Date:   Wed Jul 8 21:22:50 2020 +0900
+
+    Algorithm 공부
+
+[33mcommit 91e92989a2cef397e6b1ff253c42a275df3f0df2[m
+Author: Defian <iautm91@gmail.com>
+Date:   Wed Jul 8 21:20:52 2020 +0900
+
+    Clean the Repository
+
+[33mcommit 1cda57621e579fc83a5d7d55c6c0ffe21bc8b70b[m
+Author: Defian <iautm91@gmail.com>
+Date:   Tue Jul 7 17:19:35 2020 +0900
+
+    Clean the Repository
+
+[33mcommit daa7a01e1521cabedb694b7fe7c79bfdf7923462[m
+Author: Defian <iautm91@gmail.com>
+Date:   Tue Jul 7 10:18:20 2020 +0900
+
+    Update README.md
+
+[33mcommit 4c6b576af304be2bacfff8a12d619844ec42cc3c[m
+Author: Defian <iautm91@gmail.com>
+Date:   Tue Jul 7 10:16:49 2020 +0900
+
+    Update README.md
+
+[33mcommit 25f65c6194bd65773ea43ebfebe51cd310ad9ceb[m
+Author: Defian <iautm91@gmail.com>
+Date:   Tue Jul 7 10:13:45 2020 +0900
+
+    Clean the Git
+
+[33mcommit 3881b3f586583c66668b16776d3d0bce508adbbb[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sun Jul 5 22:34:38 2020 +0900
+
+    2020-07-05_22-32-58
+
+[33mcommit fdec9ba112dbcf7ac98a699251481149f2184c44[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sun Jul 5 10:16:33 2020 +0900
+
+    Vue study update
+
+[33mcommit dce0bf58ed3abadfd6093bf56af081ad43b84e0b[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sun Jul 5 10:06:39 2020 +0900
+
+    update vue study
+
+[33mcommit 8cd047db5c261c4742dc79a278c642bae5bfe887[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sun Jul 5 09:43:35 2020 +0900
+
+    Algorithm Study update
+
+[33mcommit 98333aca5a329e3d431aa9c348a4081dc5bc866f[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sun Jul 5 09:40:57 2020 +0900
+
+    Clean the workspace
+
+[33mcommit a6116fc2f588e562f72a39b98b44fb781758f2d0[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sun Jul 5 09:35:09 2020 +0900
+
+    Clean the workspace
+
+[33mcommit 534961bf9d2d6ad1c0a4b2b0c90e7ef4b293a47b[m
+Author: Defian <iautm91@gmail.com>
+Date:   Fri Jul 3 21:53:32 2020 +0900
+
+    2020-07-03_21-53-24
+
+[33mcommit 4bd9c1d0edf96de42e633ab965c09e9f70e347b2[m
+Author: Defian <iautm91@gmail.com>
+Date:   Fri Jul 3 21:39:56 2020 +0900
+
+    git ignore add
+
+[33mcommit 492cc57ae62623bfcdbb2e9decdc8f7b4b98b942[m
+Author: Defian <iautm91@gmail.com>
+Date:   Fri Jul 3 21:34:55 2020 +0900
+
+    update study history
+
+[33mcommit a25d4a3ff95e363d7f0688ee042ac763f73e7610[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Fri Jul 3 20:12:47 2020 +0900
+
+    2020-07-03_20-12-44
+
+[33mcommit 8f2d3794bb2f3acb3144e9e385b8e28062734efd[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Jun 14 21:39:46 2020 +0900
+
+    2020-06-14_21-39-45
+
+[33mcommit ec00ead6f10479b5100a0e078bffc78c315eaa81[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Jun 14 09:48:31 2020 +0900
+
+    2020-06-14_09-48-30
+
+[33mcommit aae35256c393105d6d5ece43350936e25353a865[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Wed Jun 10 21:28:01 2020 +0900
+
+    2020-06-10_21-28-00
+
+[33mcommit d0ae52e8a5f74a39b9312251513a10b30bc06e81[m
+Merge: 806bf66a c426e244
+Author: 김형철 <iautm91@gmail.com>
+Date:   Mon Jun 8 21:43:28 2020 +0900
+
+    Merge branch 'master' of https://github.com/iautm91/defian
+
+[33mcommit 806bf66aa8022cf31f5ee18ead3bcd8cf2ce96a6[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Mon Jun 8 21:42:30 2020 +0900
+
+    2020-06-08_21-42-28
+
+[33mcommit c7c14fe16598f12fe9c6e7412a54994b364a4138[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sat Jun 6 20:24:11 2020 +0900
+
+    2020-06-06_20-24-10
+
+[33mcommit c426e2440932aab25edcccb1d5348f78179c092a[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Tue Apr 21 21:46:41 2020 +0900
+
+    20200421
+
+[33mcommit 6269eff507dd3821a978ae2b39edbe58906d7755[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Tue Apr 7 21:50:09 2020 +0900
+
+    2020-04-07_21-50-09
+
+[33mcommit 1cb569a7398dcabd9d8b00cc493011e866309863[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Mon Apr 6 20:25:25 2020 +0900
+
+    2020-04-06_20-25-24
+
+[33mcommit 38507def3108ebe70b7f7dea1acd3029128c2918[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Tue Mar 31 19:33:14 2020 +0900
+
+    2020-03-31_19-33-13
+
+[33mcommit 9d9d5da2cf372eccd218f740b245b6652e340a6c[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Mar 22 21:45:03 2020 +0900
+
+    20200322
+
+[33mcommit 84abe4db274899e7622a8ba72a7ed9d3f9d79122[m
+Merge: 908299fb dba1a973
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Mar 22 21:42:37 2020 +0900
+
+    수정
+
+[33mcommit dba1a973677c926b42a1652245b7672315a5edc7[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Mar 22 21:40:50 2020 +0900
+
+    branch테스트 설명 추가
+
+[33mcommit 908299fbf261b606a3aacd6a5ee7350651ead052[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Mar 22 21:39:28 2020 +0900
+
+    branch test
+
+[33mcommit 49c97ea2b45d7242c4020681253ee0f256a65369[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Mar 22 09:53:59 2020 +0900
+
+    2020-03-22_09-53-59
+
+[33mcommit 5e56a4e8d7bd4c30a548a8c486c9463ac92429a2[m
+Author: Defian <iautm91@gmail.com>
+Date:   Sat Mar 21 11:34:16 2020 +0900
+
+    2020-03-21
+
+[33mcommit 06bced4cde1d0a4acf4dee5592556c14cd501f5a[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sat Feb 22 15:30:24 2020 +0900
+
+    2020-02-22_15-30-23
+
+[33mcommit a005f642693724fa3ee2c62ffa9997fdf0ee0d3c[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sat Feb 8 08:36:04 2020 +0900
+
+    2020-02-08_08-35-52
+
+[33mcommit e8cd847963a734cd692504ff9528f2224ef25dfa[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Fri Feb 7 19:02:57 2020 +0900
+
+    2020-02-07_19-02-56
+
+[33mcommit 81dc40c46feab1e077f8c7a5c96bcb5e82088821[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Feb 2 22:58:07 2020 +0900
+
+    2020-02-02_22-58-05
+
+[33mcommit 98011952c54d2b33f0b826dcb01176ff81c38c16[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Wed Jan 29 20:04:12 2020 +0900
+
+    2020-01-29_20-04-12
+
+[33mcommit c5b1bb097b03b2c24c5c60a3d5326828983225d4[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Mon Jan 27 11:05:00 2020 +0900
+
+    20200127 study
+
+[33mcommit 725874e13df45f52ed9a82a9f43136f566b75c2e[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Jan 26 09:36:44 2020 +0900
+
+    2020-01-26_09-36-44
+
+[33mcommit b6160629272d32ca908f185f09c3ae15e8d25596[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Thu Jan 23 16:22:13 2020 +0900
+
+    2020-01-23_16-22-13
+
+[33mcommit 7cd6f261da691548e639e073fa0bff2629312da3[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Jan 19 21:42:57 2020 +0900
+
+    2020-01-19_21-42-57
+
+[33mcommit b14b427cb4701aa6d6ff4906cf8ba85e1b497578[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Jan 19 17:40:11 2020 +0900
+
+    initaial commit for Vanila JS 2
+
+[33mcommit 05015f4b371944e9206f0b978000064ff3cd8e2e[m
+Merge: 92a18769 a4d3553e
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Jan 19 17:28:03 2020 +0900
+
+    Merge branch 'master' of https://github.com/iautm91/defian
+
+[33mcommit 92a18769cb402edfcc8b31caba1603297a51ecdc[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sat Jan 18 20:08:00 2020 +0900
+
+    2020-01-18_20-08-00
+
+[33mcommit a4d3553e24a573240a52d9f7dfcc5db24c122fee[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sat Jan 18 19:45:32 2020 +0900
+
+    2020-01-18 study js
+
+[33mcommit 9bc98b16eed1ea56c16f3107e2e053ec86dba35a[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Thu Jan 16 17:44:33 2020 +0900
+
+    2020-01-16_17-44-32
+
+[33mcommit 7ecf79c0fa9c12671dc492865562c65f655c0dc5[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sat Jan 11 21:04:51 2020 +0900
+
+    2020-01-11_21-04-50
+
+[33mcommit 53d466e1cb0a1ac9ab4f380c0cb0e7ed28ce0a71[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Mon Jan 6 18:10:15 2020 +0900
+
+    2020-01-06_18-10-15
+
+[33mcommit 2dd0e16ffde159f05fb1c4a15a1c1d3b670fd042[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Fri Jan 3 23:10:54 2020 +0900
+
+    2020-01-03
+
+[33mcommit 520f156986ebe6dc02ca03dd561d54dd6c21b348[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Fri Jan 3 22:34:53 2020 +0900
+
+    web page test
+    
+    web page test
+
+[33mcommit aa923af4d4095bc03f53ccea2e60cc1773474281[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Fri Jan 3 22:28:50 2020 +0900
+
+    2020-01-03_22-28-50
+
+[33mcommit 9c3643104538b5e126434b410a40025c1f741f72[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Tue Dec 31 14:24:47 2019 +0900
+
+    2019-12-31_14-24-45
+
+[33mcommit fa864185e612ff62d344af6a1c23d196fe7c6c27[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 29 17:56:57 2019 +0900
+
+    2019-12-29_17-56-55
+
+[33mcommit 71965d9e3324a65cdd674aabb6ed63b39bf1a01a[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 29 09:18:25 2019 +0900
+
+    2019-12-29_09-18-23
+
+[33mcommit 45da6b711beab0e23f23fb161662f7b609715980[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sat Dec 28 08:26:24 2019 +0900
+
+    2019-12-28_08-26-24
+
+[33mcommit 85ce4392508dcec9cd29faf4c7e4a487086f6db6[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Fri Dec 27 20:31:41 2019 +0900
+
+    2019-12-27_20-31-35
+
+[33mcommit ab906ed97a5468fdb1e595919354f21e644052a3[m
+Merge: 5d658bd3 e64f1952
+Author: 김형철 <iautm91@gmail.com>
+Date:   Thu Dec 26 22:37:53 2019 +0900
+
+    Merge branch 'master' of https://github.com/iautm91/defian
+
+[33mcommit 5d658bd3b5422729adca3274f994756cb31bd87b[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Thu Dec 26 16:44:31 2019 +0900
+
+    2019-12-25_04-02-20
+
+[33mcommit e64f1952d3a936b9e1747950dcdce238f321421f[m
+Merge: 787a8db0 1a668975
+Author: 김형철 <iautm91@gmail.com>
+Date:   Thu Dec 26 11:42:48 2019 +0900
+
+    Merge branch 'master' of https://github.com/iautm91/defian
+
+[33mcommit 787a8db0c6b9475fec95b115db126bdacbc3472c[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Thu Dec 26 11:41:05 2019 +0900
+
+    2019_12_26 알고리즘공부
+
+[33mcommit 1a668975c7ef06c56193414cf025b561f9218a9c[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sat Dec 21 23:35:58 2019 +0900
+
+    2019-12-21_23-35-57
+
+[33mcommit f1502729be7baf60a4bbf1ed5fe689b3a4ef8da4[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sat Dec 7 21:11:00 2019 +0900
+
+    2019-12-07_21-11-00
+
+[33mcommit 2cc3f18cb7ede2b5e3ae9ac59a903febc444626b[m
+Merge: 12212c85 fca13b55
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sat Dec 7 19:08:44 2019 +0900
+
+    Merge branch 'master' of https://github.com/iautm91/defian
+
+[33mcommit 12212c85ffa94ec0f3a4d8c004ab452e7c9f6fff[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sat Dec 7 19:07:45 2019 +0900
+
+    Python study_191207
+
+[33mcommit fca13b5531a4c7c201463747d25186e22b5daf05[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 19:20:31 2019 +0900
+
+    2019-12-01_19-20-31
+
+[33mcommit 9ef51a9b8e3bdc78eac99ba4fa3fb4e2392836e7[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 19:18:22 2019 +0900
+
+    2019-12-01_19-18-22
+
+[33mcommit bff731cd4760b9e5150a2242ed9889b6e9cce51b[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 19:11:12 2019 +0900
+
+    2019-12-01
+
+[33mcommit 1234c83a2d2534c26295eee6cf2c19a13d8adf05[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 17:34:58 2019 +0900
+
+    test
+
+[33mcommit 07e713ad065d382b5e94485a51035eb7dab63077[m
+Merge: 6e85af1c 06a47d32
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 17:21:46 2019 +0900
+
+    Merge branch 'master' of https://github.com/iautm91/defian
+
+[33mcommit 06a47d322ce6fb651bc12d43c58509f2c9478e07[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 16:54:19 2019 +0900
+
+    test 완료
+
+[33mcommit 6e85af1c83a147dc5fa97c2472bd325e70d46aa5[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 16:45:18 2019 +0900
+
+    test2
+
+[33mcommit 0c0ab6c6997748724ce425d5741381606d83c5a3[m
+Merge: 5050092a ddf82de9
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 16:43:21 2019 +0900
+
+    Merge branch 'master' of https://github.com/iautm91/defian
+
+[33mcommit 5050092a0c00b0554d1218ece2e7a91f73392523[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 16:41:51 2019 +0900
+
+    test
+
+[33mcommit 2468dfa219d4ba6a9e66b2f66c1b80721afbe27b[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 16:31:37 2019 +0900
+
+    test
+
+[33mcommit 1fa78ab60f4605183ed124f8668a00e7d18e7a71[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 16:28:10 2019 +0900
+
+    test
+
+[33mcommit ddf82de96c311e7dc8fb788e34bb035e8d834484[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Sun Dec 1 14:18:51 2019 +0900
+
+    Update README.md
+
+[33mcommit a679823c98537fe2ce60f8133952ac2ec5093731[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 11:33:57 2019 +0900
+
+    2019-12-01_11-33-56
+
+[33mcommit 1bc8ae0b1af761f5e415faaec1e63c0b747247c8[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 11:32:57 2019 +0900
+
+    2019-12-01_11-32-56
+
+[33mcommit dde1e23d2ba4e9e9c0eb4023aff3cec37c39c9d1[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 10:18:31 2019 +0900
+
+    test
+
+[33mcommit 5fdfb9e04391b9da48f96b249715b9ffd19c68a2[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sun Dec 1 10:17:02 2019 +0900
+
+    test
+
+[33mcommit 4d03827a4c999deea390620411e0b3ff4abb8b71[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Wed Nov 13 18:25:08 2019 +0900
+
+    2019-11-13_18-25-05
+
+[33mcommit 00c01989f6e3efc73f4fe36b2c02142283924202[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Mon Nov 11 20:50:08 2019 +0900
+
+    2019-11-11_20-50-04
+
+[33mcommit ffcc3123678089dcc86ce22c7a370eac69049b7b[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Wed Oct 23 18:25:55 2019 +0900
+
+    2019-10-23_18-25-50
+
+[33mcommit e77cbf8a38b7e4afab68e58e94c587b63a0292ed[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Sat Oct 19 08:07:30 2019 +0900
+
+    2019-10-19_08-07-25
+
+[33mcommit 034b19f5e30edeead3a152fa227515e14aeb4a92[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Fri Oct 18 17:22:50 2019 +0900
+
+    2019-10-18_17-22-46
+
+[33mcommit d750d7dff35a8eeaafaa55ddb7731e87b93874fb[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Wed Oct 16 22:59:40 2019 +0900
+
+    2019-10-16_22-59-40
+
+[33mcommit 37b395895d5bec1c617aecbe1be3c856292b27e8[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Wed Oct 16 18:12:37 2019 +0900
+
+    2019-10-16_18-12-34
+
+[33mcommit b695dc13a8b0b6f01ef89ae704a4fa63cf26c406[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Tue Oct 15 05:45:54 2019 +0900
+
+    2019-10-15_05-45-54
+
+[33mcommit 4f9c2de1ea5a2bc75b2921a910c339fc0f0b94b6[m
+Author: 김형철 <iautm91@gmail.com>
+Date:   Tue Oct 15 05:37:36 2019 +0900
+
+    2019-10-15_05-37-33
+
+[33mcommit 69c3c0a63df68a3e20056effebef377820056046[m
+Author: defian <iautm91@gmail.com>
+Date:   Sun Oct 13 11:38:26 2019 +0900
+
+    2019-10-13_11-38-25
+
+[33mcommit 03f023f9f03ab1f32f403dffa4865795d276ab38[m
+Author: defian <iautm91@gmail.com>
+Date:   Tue Oct 8 20:33:09 2019 +0900
+
+    2019-10-08_20-33-06
+
+[33mcommit 94dafab8e87720bf4723e2b85ed1e734d27a5d43[m
+Author: defian <iautm91@gmail.com>
+Date:   Thu Sep 26 20:05:33 2019 +0900
+
+    2019-09-26_20-05-28
+
+[33mcommit 51ee0ee12cf9f6adc8b136cdbaf7ff0e957b4292[m
+Author: defian <iautm91@gmail.com>
+Date:   Tue Sep 24 21:28:20 2019 +0900
+
+    2019-09-24_21-28-14
+
+[33mcommit ccdb5b239e91417c2fb273c2c6dbda7b98971a82[m
+Author: defian <iautm91@gmail.com>
+Date:   Wed Sep 18 18:12:44 2019 +0900
+
+    2019-09-18_18-12-42
+
+[33mcommit 995c0bc2148f47d6d27d84ef8b11e3ce0ec8728f[m
+Author: defian <iautm91@gmail.com>
+Date:   Thu Sep 12 21:18:22 2019 +0900
+
+    2019-09-12_21-18-19
+
+[33mcommit 3c8265f2b94854194149420d133d68f246c6442c[m
+Author: defian <iautm91@gmail.com>
+Date:   Sun Sep 1 21:40:47 2019 +0900
+
+    2019-09-01_21-40-44
+
+[33mcommit e45e657756efe79aaccf567abebffcce83e9f09a[m
+Author: defian <iautm91@gmail.com>
+Date:   Sun Sep 1 08:43:47 2019 +0900
+
+    2019-09-01_08-43-46
+
+[33mcommit 052ca81e931f35598843e5ace7a01fae121e5fa0[m
+Author: defian <iautm91@gmail.com>
+Date:   Fri Aug 30 21:31:14 2019 +0900
+
+    2019-08-30 Apply .gitignore
+
+[33mcommit 8981b008629c9333d7a7ac26056b122d63661156[m
+Merge: 1ba8bbad e8b3e13b
+Author: defian <iautm91@gmail.com>
+Date:   Fri Aug 30 21:15:48 2019 +0900
+
+    Merge branch 'master' of https://github.com/iautm91/defian
+
+[33mcommit 1ba8bbadbfa1424c58716a232a1bd4edf7f407dd[m
+Author: defian <iautm91@gmail.com>
+Date:   Fri Aug 30 21:13:35 2019 +0900
+
+    2019-08-30_21-13-35
+
+[33mcommit e8b3e13ba32dc9e7af0f36cf6e46be5e472d621e[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Fri Aug 30 21:04:12 2019 +0900
+
+    Update README.md
+
+[33mcommit f701c0b15eaf8efdfa2d216c45cde22d9c5f4806[m
+Author: defian <iautm91@gmail.com>
+Date:   Fri Aug 30 20:52:46 2019 +0900
+
+    2019-08-30_20-52-46
+
+[33mcommit ea688ab3edd80123e08958d34eeba2514d2a17dd[m
+Merge: 1e5a4cf6 6b25dfee
+Author: defian <iautm91@gmail.com>
+Date:   Fri Aug 30 20:48:43 2019 +0900
+
+    Merge branch 'master' of https://github.com/iautm91/defian
+
+[33mcommit 1e5a4cf675c44b0e20890bbd641fbd7dd8fa89fd[m
+Author: defian <iautm91@gmail.com>
+Date:   Fri Aug 30 20:44:53 2019 +0900
+
+    2019-08-30 이전까지 알고리즘공부 내용 정리
+
+[33mcommit 6b25dfeed000cdb8f0bbc3c6982637854fd22e64[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Sat May 18 19:09:38 2019 +0900
+
+    Rename THISDIRIS README.md to A_THIS DIR IS README.md
+
+[33mcommit a5a106fd24d7d018898b77f5bd4377bd5cb8608c[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Sat May 18 19:08:32 2019 +0900
+
+    Create THISDIRIS README.md
+
+[33mcommit 593911c5d6d9e2e8c6b007c92b755770382c07b2[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Sat May 18 19:02:07 2019 +0900
+
+    Update README.md
+
+[33mcommit cbc83347e7d331cee80e9895ef0493288706e8ea[m
+Merge: 24a19f77 145bea6d
+Author: defian <iautm91@gmail.com>
+Date:   Sat May 18 16:16:37 2019 +0900
+
+    Merge branch 'master' of https://github.com/iautm91/defian
+
+[33mcommit 24a19f77031c6940307ede7bdf71c7a2d18eded0[m
+Author: defian <iautm91@gmail.com>
+Date:   Sat May 18 16:15:37 2019 +0900
+
+    JAVA Code upload about Backjoon, Samsung, Structure / 2019-05-18
+
+[33mcommit 145bea6d97e37b937c20aa493a7310b3213e9d86[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Fri May 17 22:49:47 2019 +0900
+
+    Update README.md
+
+[33mcommit bf370253f8acec2660b63fb987954529d0ff8e96[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Fri May 17 22:49:15 2019 +0900
+
+    Update README.md
+
+[33mcommit fa38553f9e87cd8e4f9256c4d4406d55ec61c150[m
+Author: defian <iautm91@gmail.com>
+Date:   Fri May 17 22:46:56 2019 +0900
+
+    Clear repository 2019-05-17
+
+[33mcommit e5c6d134dd5183e2dcb279dcc42e8b300fa17947[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Wed May 15 22:55:44 2019 +0900
+
+    Update README.md
+
+[33mcommit 2d39f7c48116719c792c883b257e8ae0ec765674[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Wed May 15 22:52:10 2019 +0900
+
+    Update README.md
+
+[33mcommit 2f7f69c381fe3160d9eb216addb41e54a4c6b801[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Wed May 15 22:50:55 2019 +0900
+
+    Update README.md
+
+[33mcommit f23ac6335e2bdcde98c5b7b420265045ce228c49[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Wed May 15 22:50:29 2019 +0900
+
+    Update README.md
+
+[33mcommit 787e5c4375b8e2ad6c9b31f989cf032acd58f745[m
+Author: iautm91 <iautm91@gmail.com>
+Date:   Wed May 15 22:47:41 2019 +0900
+
+    Create README.md
+
+[33mcommit 386234b064334d284d7e478ad6dfe88679d4b434[m
+Merge: a4b614f6 1d5a66e3
+Author: defian <iautm91@gmail.com>
+Date:   Mon May 13 23:23:24 2019 +0900
+
+    ADD my_module [div] & comment
+
+[33mcommit a4b614f6bbf8e6822bfc088e5a17dd6161d67d00[m
+Author: defian <iautm91@gmail.com>
+Date:   Mon May 13 23:21:33 2019 +0900
+
+    ADD my_module [div] & comment
+
+[33mcommit 1d5a66e3bc63a21ae326eafa8a8e04b7f21bd474[m
+Author: defian <iautm91@gmail.com>
+Date:   Mon May 13 23:19:39 2019 +0900
+
+    ADD my_module [Div]
+
+[33mcommit dc5bec13fdfeca9fcb92c2c3ab38a5389b5132f5[m
+Author: defian <iautm91@gmail.com>
+Date:   Mon May 13 22:59:25 2019 +0900
+
+    ADD MY module [mUl]
+
+[33mcommit 11ccae64bd6e8fc26d90a9a2aa9cc65ddf5c136d[m
+Author: defian <iautm91@gmail.com>
+Date:   Mon May 13 22:51:08 2019 +0900
+
+    Test _ amend_amend test
+
+[33mcommit cde7deec79ef6618d4a8950f2c97eba3f16a1c89[m
+Author: defian <iautm91@gmail.com>
+Date:   Mon May 13 20:28:52 2019 +0900
+
+    Add my_module [MUL]
+
+[33mcommit 04a8a6912570a9a341dd4699a1b5fa7504e375bd[m
+Author: defian <iautm91@gmail.com>
+Date:   Mon May 13 20:23:36 2019 +0900
+
+    Update my_module [sub]
+
+[33mcommit 958bd69eebdc497cb393715363ba4dfc0a64ab16[m
+Author: defian <iautm91@gmail.com>
+Date:   Mon May 13 20:21:08 2019 +0900
+
+    ADD my_module [Add]
+
+[33mcommit bac21353b4dae16dc3980b955a0048a7187c4299[m
+Author: defian <iautm91@gmail.com>
+Date:   Mon May 13 18:52:51 2019 +0900
+
+    Edit Readme 190513
+
+[33mcommit 7d0db6197841d7e1da2208865750d35a1a9da2a5[m
+Author: defian <iautm91@gmail.com>
+Date:   Sun May 12 22:17:19 2019 +0900
+
+    Update README.txt & Update config_user.name to defian
+
+[33mcommit dd91b7531fba8d8970bf79f74374be298c588508[m
+Author: woody <iautm91@gmail.com>
+Date:   Sun May 12 22:02:43 2019 +0900
+
+    first commit
