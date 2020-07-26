@@ -11,7 +11,7 @@
 using namespace std;
 #include <string>
 
-int main117192(){
+int main(){
 	string str;
 
 	for (int i=0; i<100 && !cin.eof(); i++){
