@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import { Card, Popover, Button, Avatar } from 'antd';
+import { Card, Popover, Button, Avatar, List, Comment } from 'antd';
 import { RetweetOutlined, HeartOutlined, MessageOutlined, EllipsisOutlined, HeartTwoTone } from '@ant-design/icons';
 
+import CommentForm from './CommentForm';
 import PostImages from './PostImages';
 import { useCallback, useState } from 'react';
+import PostCardContent from './PostCardContent';
 
 const PostCard = ({ post }) => {
     const [liked, setLiked] = useState(false);
@@ -47,12 +49,26 @@ const PostCard = ({ post }) => {
                 <Card.Meta
                     avatar={<Avatar>{post.User.nickname[0]}</Avatar>}
                     title={post.User.nickname}
-                    description={post.content}
+                    description={<PostCardContent postData={post.content} />}
                 />
             </Card>
             {commentFormOpened && (
                 <div>
-                    댓글부분
+                    <CommentForm post={post} />
+                    <List
+                        header={`${post.Comments.length}개의 댓글`}
+                        itemLayout="horizontal"
+                        dataSource={post.Comments}
+                        renderItem={(item) => (
+                            <li>
+                                <Comment
+                                    author={item.User.nickname}
+                                    avatar={<Avatar>{item.User.nickname[0]}</Avatar>}
+                                    content={item.contents}
+                                />
+                            </li>
+                        )}
+                    />
                 </div>
             )}
             {/* <Comments /> */}

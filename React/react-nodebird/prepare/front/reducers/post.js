@@ -12,9 +12,11 @@ export const initialState = {
                 src: "https://2.bp.blogspot.com/-bD9iB6eEFNc/WXdfMahDf-I/AAAAAAAAEX0/Jr2V9cPvrJITSZkTmwt2k1PBZ_m830A5wCLcBGAs/s1600/image1.png",
             }, {
                 src: "https://miro.medium.com/proxy/1*xNQHxXBX-1RQCPM3LYa3wA.png",
-            }, {
+            },
+            {
                 src: "https://lc-gold-cdn.xitu.io/c526b2d51541a40e7043.png",
-            }],
+            }
+        ],
         Comments: [{
             User: {
                 nickname: 'zero',
