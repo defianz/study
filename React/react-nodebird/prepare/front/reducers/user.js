@@ -6,28 +6,68 @@ export const initialState = {
     loginData: {},
 }
 
-export const loginAction = (data) => {
+// export const loginAction = (data) => {
+//     return (dispatch, getState) => {
+//         const state = getState;
+//         dispatch(loginRequestAction());
+//         axios.post('/api/login')
+//             .then((res) => {
+//                 dispatch(loginSuccessAction(res.data));
+//             })
+//             .catch((err) => {
+//                 dispatch(loginFailureAction(err));
+//             })
+//     }
+// }
+
+
+export const loginRequestAction = (data) => {
     return {
-        type: 'LOG_IN',
+        type: 'LOG_IN_REQUEST',
         data,
     }
 }
 
-export const logoutAction = () => {
+
+export const logoutRequestAction = () => {
     return {
-        type: 'LOG_OUT',
+        type: 'LOG_OUT_REQUEST',
     }
 }
 
+
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'LOG_IN':
+        case 'LOG_IN_REQUEST':
+            return {
+                ...state,
+                isLoggedIn: true,
+            };
+        case 'LOG_IN_SUCCESS':
+            return {
+                ...state,
+                isLoggedIn: true,
+                me: { ...action.data, nickname: 'defian' },
+            };
+        case 'LOG_IN_FAILURE':
             return {
                 ...state,
                 isLoggedIn: true,
                 me: action.data,
+            };
+        case 'LOG_OUT_REQUEST':
+            return {
+                ...state,
+                isLoggedIn: false,
+                me: null,
             }
-        case 'LOG_OUT':
+        case 'LOG_OUT_SUCCESS':
+            return {
+                ...state,
+                isLoggedIn: false,
+                me: null,
+            }
+        case 'LOG_OUT_FAILURE':
             return {
                 ...state,
                 isLoggedIn: false,
