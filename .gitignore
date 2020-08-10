@@ -2,3 +2,4 @@
 *.log
 *.iml
 temp/
+node_modules/
