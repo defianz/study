@@ -20,7 +20,7 @@ const PostCard = ({ post }) => {
     const onToggleLike = useCallback(() => {
         setLiked((prev) => !prev);
     }, []);
-    const onToggleComment = useCallback(() => {
+    const oP@nToggleComment = useCallback(() => {
         setCommentFormOpened((commentFormOpened) => !commentFormOpened);
     });
     const onRemovePost = useCallback(() => {
