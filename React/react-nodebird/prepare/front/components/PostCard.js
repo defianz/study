@@ -14,6 +14,7 @@ import PostImages from "./PostImages";
 import { useCallback, useState } from "react";
 import PostCardContent from "./PostCardContent";
 import { REMOVE_POST_REQUEST } from "../reducers/post";
+import FollowButton from "./FollowButton";
 
 const PostCard = ({ post }) => {
   const dispatch = useDispatch();
@@ -78,6 +79,7 @@ const PostCard = ({ post }) => {
             <EllipsisOutlined />
           </Popover>,
         ]}
+        extra={id && <FollowButton post={post} />}
       >
         <Card.Meta
           avatar={<Avatar>{post.User.nickname[0]}</Avatar>}
