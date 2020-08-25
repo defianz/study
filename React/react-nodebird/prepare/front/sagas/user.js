@@ -30,29 +30,28 @@ const l = logIn({ type: LOG_IN_REQUEST, data: { id: "defian@gmail.com" } });
 l.next();
 
 function logInAPI(data) {
-  return axios.post("/api/login", data);
+  return axios.post("/user/login", data);
 }
 
 function* logIn(action) {
   try {
-    // const result = yield call(logInAPI, action.data)
     //fork 비동기 호출 yield는 await 역할인데, fork에서는 그렇지 않음 call에서만
     //call 동기 호출
-    yield delay(1000);
+    const result = yield call(logInAPI, action.data);
     yield put({
       type: LOG_IN_SUCCESS,
-      data: action.data,
+      data: result.data,
     });
   } catch (err) {
     yield put({
       type: LOG_IN_FAILURE,
-      data: err.response.data,
+      error: err.response.data,
     });
   }
 }
 
 function logOutAPI() {
-  return axios.post("/api/logout");
+  return axios.post("/user/logout");
 }
 
 function* logOut() {
@@ -70,13 +69,14 @@ function* logOut() {
   }
 }
 
-function SignUpAPI() {
-  return axios.post("/api/SignUp");
+function SignUpAPI(data) {
+  return axios.post("/user", data);
 }
 
-function* SignUp() {
+function* SignUp(action) {
   try {
-    // const result = yield call(SignUpAPI);
+    const result = yield call(SignUpAPI, action.data);
+    console.log(result);
     yield delay(1000);
     yield put({
       type: SIGN_UP_SUCCESS,
@@ -84,7 +84,7 @@ function* SignUp() {
   } catch (err) {
     yield put({
       type: SIGN_UP_FAILURE,
-      data: err.response.data,
+      error: err.response.data,
     });
   }
 }
