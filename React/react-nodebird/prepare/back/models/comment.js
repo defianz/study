@@ -2,10 +2,10 @@ const { sequelize } = require(".");
 
 module.exports = (sequelize, DataTypes) => {
   const Comment = sequelize.define(
-    "Post",
+    "Comment",
     {
       // id가 기본적으로 들어있다.
-      contents: {
+      content: {
         type: DataTypes.TEXT,
         allowNULL: false,
       },

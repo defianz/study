@@ -9,6 +9,9 @@ import {
 } from "redux-saga/effects";
 import axios from "axios";
 import {
+  LOAD_USER_REQUEST,
+  LOAD_USER_SUCCESS,
+  LOAD_USER_FAILURE,
   SIGN_UP_REQUEST,
   SIGN_UP_SUCCESS,
   SIGN_UP_FAILURE,
@@ -26,8 +29,29 @@ import {
   UNFOLLOW_FAILURE,
 } from "../reducers/user";
 
-const l = logIn({ type: LOG_IN_REQUEST, data: { id: "defian@gmail.com" } });
-l.next();
+function loadUserAPI() {
+  return axios.get("/user");
+}
+
+function* loadUser(action) {
+  try {
+    //fork 비동기 호출 yield는 await 역할인데, fork에서는 그렇지 않음 call에서만
+    //call 동기 호출
+    const result = yield call(loadUserAPI, action.data);
+    yield put({
+      type: LOAD_USER_SUCCESS,
+      data: result.data,
+    });
+  } catch (err) {
+    yield put({
+      type: LOAD_USER_FAILURE,
+      error: err.response.data,
+    });
+  }
+}
+
+// const l = logIn({ type: LOG_IN_REQUEST, data: { id: "defian@gmail.com" } });
+// l.next();
 
 function logInAPI(data) {
   return axios.post("/user/login", data);
@@ -56,15 +80,14 @@ function logOutAPI() {
 
 function* logOut() {
   try {
-    // const result = yield call(logOutAPI);
-    yield delay(1000);
+    yield call(logOutAPI);
     yield put({
       type: LOG_OUT_SUCCESS,
     });
   } catch (err) {
     yield put({
       type: LOG_OUT_FAILURE,
-      data: err.response.data,
+      error: err.response.data,
     });
   }
 }
@@ -129,6 +152,10 @@ function* unfollow(action) {
   }
 }
 
+function* watchLoadUser() {
+  yield takeLatest(LOAD_USER_REQUEST, loadUser);
+}
+
 function* watchFollow() {
   yield takeLatest(FOLLOW_REQUEST, follow);
 }
@@ -151,6 +178,7 @@ function* watchSignUp() {
 
 export default function* userSaga() {
   yield all([
+    fork(watchLoadUser),
     fork(watchFollow),
     fork(watchUnfollow),
     fork(watchLogIn),

@@ -5,6 +5,7 @@ import PostCard from "../components/PostCard";
 import PostForm from "../components/PostForm";
 import { useEffect } from "react";
 import { LOAD_POSTS_REQUEST } from "../reducers/post";
+import { LOAD_USER_REQUEST } from "../reducers/user";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,9 @@ const Home = () => {
   useEffect(() => {
     dispatch({
       type: LOAD_POSTS_REQUEST,
+    });
+    dispatch({
+      type: LOAD_USER_REQUEST,
     });
   }, []);
 
@@ -33,7 +37,6 @@ const Home = () => {
         console.log(hasMorePosts);
         console.log(loadPostsLoading);
         if (hasMorePosts && !loadPostsLoading) {
-          console.log("리퀘스트실행");
           dispatch(
             {
               type: LOAD_POSTS_REQUEST,

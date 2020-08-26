@@ -2,12 +2,14 @@ const express = require("express");
 const cors = require("cors");
 const postRouter = require("./routes/post");
 const userRouter = require("./routes/user");
+const postsRouter = require("./routes/posts");
 const db = require("./models");
 const passportConfig = require("./passport");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const passport = require("passport");
 const dotenv = require("dotenv");
+const morgan = require("morgan");
 
 dotenv.config();
 const app = express();
@@ -21,10 +23,11 @@ db.sequelize
 
 passportConfig();
 
+app.use(morgan("dev"));
 app.use(
   cors({
-    origin: "*",
-    // credentials: false,
+    origin: "http://localhost:3060",
+    credentials: true, // 쿠키 전달 옵션 : 전달하려면 true (default : false)
   })
 );
 app.use(express.json());
@@ -52,25 +55,30 @@ app.get("/", (req, res) => {
   res.send("hello express");
 });
 
-app.get("/posts", (req, res) => {
-  res.json([
-    {
-      id: 1,
-      content: "hello",
-    },
-    {
-      id: 2,
-      content: "hello2",
-    },
-    {
-      id: 3,
-      content: "hello3",
-    },
-  ]);
-});
+// app.get("/posts", (req, res) => {
+//   res.json([
+//     {
+//       id: 1,
+//       content: "hello",
+//     },
+//     {
+//       id: 2,
+//       content: "hello2",
+//     },
+//     {
+//       id: 3,
+//       content: "hello3",
+//     },
+//   ]);
+// });
 
 app.use("/post", postRouter);
+app.use("/posts", postsRouter);
 app.use("/user", userRouter);
+
+// app.use((err,req,res,next) =>{
+
+// });
 
 app.listen(3065, () => {
   console.log("서버실행중!!");
