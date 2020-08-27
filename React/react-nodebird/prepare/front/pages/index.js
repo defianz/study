@@ -10,9 +10,18 @@ import { LOAD_USER_REQUEST } from "../reducers/user";
 const Home = () => {
   const dispatch = useDispatch();
   const { me } = useSelector((state) => state.user);
-  const { mainPosts, hasMorePosts, loadPostsLoading } = useSelector(
-    (state) => state.post
-  );
+  const {
+    mainPosts,
+    hasMorePosts,
+    loadPostsLoading,
+    retweetError,
+  } = useSelector((state) => state.post);
+
+  useEffect(() => {
+    if (retweetError) {
+      alert("자신의 글은 리트윗할 수 없습니다");
+    }
+  }, [retweetError]);
 
   useEffect(() => {
     dispatch({

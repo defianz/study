@@ -10,6 +10,7 @@ const cookieParser = require("cookie-parser");
 const passport = require("passport");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
+const path = require("path");
 
 dotenv.config();
 const app = express();
@@ -30,6 +31,7 @@ app.use(
     credentials: true, // 쿠키 전달 옵션 : 전달하려면 true (default : false)
   })
 );
+app.use("/", express.static(path.join(__dirname, "uploads")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser("nodebirdsecret"));
