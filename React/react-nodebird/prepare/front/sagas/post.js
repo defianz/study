@@ -9,6 +9,12 @@ import {
   throttle,
 } from "redux-saga/effects";
 import {
+  LOAD_USER_POSTS_REQUEST,
+  LOAD_USER_POSTS_SUCCESS,
+  LOAD_USER_POSTS_FAILURE,
+  LOAD_HASHTAG_POSTS_REQUEST,
+  LOAD_HASHTAG_POSTS_SUCCESS,
+  LOAD_HASHTAG_POSTS_FAILURE,
   LOAD_POST_REQUEST,
   LOAD_POST_SUCCESS,
   LOAD_POST_FAILURE,
@@ -44,6 +50,48 @@ import shortId from "shortid";
 
 import axios from "axios";
 
+function loadUserPostsAPI(data, lastId) {
+  return axios.get(`/user/${data}/posts?lastId=${lastId || 0}`);
+}
+
+function* loadUserPosts(action) {
+  try {
+    const result = yield call(loadUserPostsAPI, action.data, action.lastId);
+    yield put({
+      type: LOAD_USER_POSTS_SUCCESS,
+      data: result.data,
+    });
+  } catch (err) {
+    console.error(err);
+    yield put({
+      type: LOAD_USER_POSTS_FAILURE,
+      error: err.response.data,
+    });
+  }
+}
+
+function loadHashtagPostsAPI(data, lastId) {
+  return axios.get(
+    `/hashtag/${encodeURIComponent(data)}?lastId=${lastId || 0}`
+  );
+}
+
+function* loadHashtagPosts(action) {
+  try {
+    const result = yield call(loadHashtagPostsAPI, action.data, action.lastId);
+    yield put({
+      type: LOAD_HASHTAG_POSTS_SUCCESS,
+      data: result.data,
+    });
+  } catch (err) {
+    console.error(err);
+    yield put({
+      type: LOAD_HASHTAG_POSTS_FAILURE,
+      error: err.response.data,
+    });
+  }
+}
+
 function loadPostAPI(data) {
   return axios.get(`/post/${data}`);
 }
@@ -56,6 +104,7 @@ function* loadPost(action) {
       data: result.data,
     });
   } catch (err) {
+    console.error(err);
     yield put({
       type: LOAD_POST_FAILURE,
       error: err.response.data,
@@ -75,6 +124,7 @@ function* retweet(action) {
       data: result.data,
     });
   } catch (err) {
+    console.error(err);
     yield put({
       type: RETWEET_FAILURE,
       error: err.response.data,
@@ -94,6 +144,7 @@ function* uploadImages(action) {
       data: result.data,
     });
   } catch (err) {
+    console.error(err);
     yield put({
       type: UPLOAD_IMAGES_FAILURE,
       error: err.response.data,
@@ -113,6 +164,7 @@ function* likePost(action) {
       data: result.data,
     });
   } catch (err) {
+    console.error(err);
     yield put({
       type: LIKE_POST_FAILURE,
       error: err.response.data,
@@ -152,6 +204,7 @@ function* loadPosts(action) {
       data: result.data,
     });
   } catch (err) {
+    console.error(err);
     yield put({
       type: LOAD_POSTS_FAILURE,
       error: err.response.data,
@@ -177,6 +230,7 @@ function* addPost(action) {
       data: result.data.id,
     });
   } catch (err) {
+    console.error(err);
     yield put({
       type: ADD_POST_FAILURE,
       data: err.response.data,
@@ -200,6 +254,7 @@ function* removePost(action) {
       data: result.data,
     });
   } catch (err) {
+    console.error(err);
     yield put({
       type: REMOVE_POST_FAILURE,
       error: err.response.data,
@@ -219,6 +274,7 @@ function* addComment(action) {
       data: result.data,
     });
   } catch (err) {
+    console.error(err);
     yield put({
       type: ADD_COMMENT_FAILURE,
       error: err.response.data,
@@ -246,6 +302,14 @@ function* watchUnlikePost() {
   yield throttle(5000, UNLIKE_POST_REQUEST, unlikePost);
 }
 
+function* watchLoadUserPosts() {
+  yield throttle(5000, LOAD_USER_POSTS_REQUEST, loadUserPosts);
+}
+
+function* watchLoadHashtagPosts() {
+  yield throttle(5000, LOAD_HASHTAG_POSTS_REQUEST, loadHashtagPosts);
+}
+
 function* watchLoadPosts() {
   yield throttle(5000, LOAD_POSTS_REQUEST, loadPosts);
 }
@@ -269,6 +333,8 @@ export default function* postSaga() {
     fork(watchUploadImages),
     fork(watchUnlikePost),
     fork(watchLikePost),
+    fork(watchLoadUserPosts),
+    fork(watchLoadHashtagPosts),
     fork(watchLoadPosts),
     fork(watchAddPost),
     fork(watchRemovePost),
