@@ -9,6 +9,9 @@ import {
 } from "redux-saga/effects";
 import axios from "axios";
 import {
+  LOAD_MY_INFO_REQUEST,
+  LOAD_MY_INFO_SUCCESS,
+  LOAD_MY_INFO_FAILURE,
   LOAD_USER_REQUEST,
   LOAD_USER_SUCCESS,
   LOAD_USER_FAILURE,
@@ -40,6 +43,27 @@ import {
   REMOVE_FOLLOWER_SUCCESS,
   REMOVE_FOLLOWER_FAILURE,
 } from "../reducers/user";
+
+function loadMyInfoAPI() {
+  return axios.get("/user");
+}
+
+function* loadMyInfo(action) {
+  try {
+    //fork 비동기 호출 yield는 await 역할인데, fork에서는 그렇지 않음 call에서만
+    //call 동기 호출
+    const result = yield call(loadMyInfoAPI);
+    yield put({
+      type: LOAD_MY_INFO_SUCCESS,
+      data: result.data,
+    });
+  } catch (err) {
+    yield put({
+      type: LOAD_MY_INFO_FAILURE,
+      error: err.response.data,
+    });
+  }
+}
 
 function removeFollowerAPI(data) {
   return axios.delete(`/user/follower/${data}`);
@@ -125,8 +149,8 @@ function* changeNickname(action) {
   }
 }
 
-function loadUserAPI() {
-  return axios.get("/user");
+function loadUserAPI(data) {
+  return axios.get(`/user/${data}`);
 }
 
 function* loadUser(action) {
@@ -246,6 +270,10 @@ function* unfollow(action) {
   }
 }
 
+function* watchLoadMyInfo() {
+  yield takeLatest(LOAD_MY_INFO_REQUEST, loadMyInfo);
+}
+
 function* watchRemoveFollower() {
   yield takeLatest(REMOVE_FOLLOWER_REQUEST, removeFollower);
 }
@@ -293,6 +321,7 @@ export default function* userSaga() {
     fork(watchLoadFollowings),
     fork(watchChangeNickname),
     fork(watchLoadUser),
+    fork(watchLoadMyInfo),
     fork(watchFollow),
     fork(watchUnfollow),
     fork(watchLogIn),

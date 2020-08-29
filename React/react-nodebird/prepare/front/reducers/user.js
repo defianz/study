@@ -1,6 +1,9 @@
 import produce from "immer";
 
 export const initialState = {
+  loadMyInfoLoading: false, //유저 정보 가져오기 시도중
+  loadMyInfoDone: false,
+  loadMyInfoError: null,
   removeFollowerLoading: false, //팔로워 삭제 시도중
   removeFollowerDone: false,
   removeFollowerError: null,
@@ -32,9 +35,14 @@ export const initialState = {
   changeNicknameDone: false,
   changeNicknameError: null,
   me: null,
-  signUpData: {},
-  loginData: {},
+  userInfo: null,
+  // signUpData: {},
+  // loginData: {},
 };
+
+export const LOAD_MY_INFO_REQUEST = "LOAD_MY_INFO_REQUEST";
+export const LOAD_MY_INFO_SUCCESS = "LOAD_MY_INFO_SUCCESS";
+export const LOAD_MY_INFO_FAILURE = "LOAD_MY_INFO_FAILURE";
 
 export const REMOVE_FOLLOWER_REQUEST = "REMOVE_FOLLOWER_REQUEST";
 export const REMOVE_FOLLOWER_SUCCESS = "REMOVE_FOLLOWER_SUCCESS";
@@ -108,6 +116,20 @@ export const logoutRequestAction = () => {
 const reducer = (state = initialState, action) => {
   return produce(state, (draft) => {
     switch (action.type) {
+      case LOAD_MY_INFO_REQUEST:
+        draft.loadMyInfoLoading = true;
+        draft.loadMyInfoError = null;
+        draft.loadMyInfoDone = false;
+        break;
+      case LOAD_MY_INFO_SUCCESS:
+        draft.loadMyInfoLoading = false;
+        draft.loadMyInfoDone = true;
+        draft.me = action.data;
+        break;
+      case LOAD_MY_INFO_FAILURE:
+        draft.loadMyInfoLoading = false;
+        draft.loadMyInfoError = action.error;
+        break;
       case REMOVE_FOLLOWER_REQUEST:
         draft.removeFollowerLoading = true;
         draft.removeFollowerError = null;
@@ -160,7 +182,7 @@ const reducer = (state = initialState, action) => {
       case LOAD_USER_SUCCESS:
         draft.loadUserLoading = false;
         draft.loadUserDone = true;
-        draft.me = action.data;
+        draft.userInfo = action.data;
         break;
       case LOAD_USER_FAILURE:
         draft.loadUserLoading = false;

@@ -4,8 +4,12 @@ import produce from "immer";
 import faker from "faker";
 
 export const initialState = {
+  singlePost: null,
   mainPosts: [],
   imagePaths: [],
+  loadPostLoading: false,
+  loadPostDone: false,
+  loadPostError: null,
   hasMorePosts: true,
   retweetLoading: false,
   retweetDone: false,
@@ -57,6 +61,10 @@ export const initialState = {
 //     }));
 
 // initialState.mainPosts = initialState.mainPosts.concat(generateDummyPost(10));
+
+export const LOAD_POST_REQUEST = "LOAD_POST_REQUEST";
+export const LOAD_POST_SUCCESS = "LOAD_POST_SUCCESS";
+export const LOAD_POST_FAILURE = "LOAD_POST_FAILURE";
 
 export const REMOVE_IMAGE = "REMOVE_IMAGE";
 
@@ -125,6 +133,20 @@ export const addComment = (data) => ({
 const reducer = (state = initialState, action) => {
   return produce(state, (draft) => {
     switch (action.type) {
+      case LOAD_POST_REQUEST:
+        draft.loadPostLoading = true;
+        draft.loadPostDone = false;
+        draft.loadPostError = null;
+        break;
+      case LOAD_POST_SUCCESS:
+        draft.loadPostLoading = false;
+        draft.loadPostDone = true;
+        draft.singlePost = action.data;
+        break;
+      case LOAD_POST_FAILURE:
+        draft.loadPostLoading = false;
+        draft.loadPostError = action.error;
+        break;
       case REMOVE_IMAGE:
         draft.imagePaths = draft.imagePaths.filter((v, i) => i !== action.data);
         break;
@@ -197,10 +219,10 @@ const reducer = (state = initialState, action) => {
         draft.loadPostsError = null;
         break;
       case LOAD_POSTS_SUCCESS:
-        draft.mainPosts = action.data.concat(draft.mainPosts);
+        draft.mainPosts = draft.mainPosts.concat(action.data);
         draft.loadPostsLoading = false;
         draft.loadPostsDone = true;
-        draft.hasMorePosts = draft.mainPosts.length < 50;
+        draft.hasMorePosts = draft.mainPosts.length === 10;
         break;
       case LOAD_POSTS_FAILURE:
         draft.loadPostsLoading = false;

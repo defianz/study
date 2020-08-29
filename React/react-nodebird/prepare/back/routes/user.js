@@ -8,6 +8,7 @@ const { isLoggedIn, isNotLoggedIn } = require("./middlewares");
 
 router.get("/", async (req, res, next) => {
   //GET /user
+  console.log(req.headers);
   try {
     if (req.user) {
       const fullUserWithoutPassword = await User.findOne({
@@ -35,6 +36,49 @@ router.get("/", async (req, res, next) => {
       res.status(200).json(fullUserWithoutPassword);
     } else {
       res.status(200).json(null);
+    }
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
+});
+
+router.get("/:userId", async (req, res, next) => {
+  //GET /user1
+
+  try {
+    console.log(req.params.userId);
+    const fullUserWithoutPassword = await User.findOne({
+      where: { id: req.params.userId },
+      attributes: {
+        exclude: ["password"],
+      },
+      include: [
+        {
+          model: Post,
+          attributes: ["id"],
+        },
+        {
+          model: User,
+          as: "Followings",
+          attributes: ["id"],
+        },
+        {
+          model: User,
+          as: "Followers",
+          attributes: ["id"],
+        },
+      ],
+    });
+    // console.log(fullUserWithoutPassword);
+    if (fullUserWithoutPassword) {
+      const data = fullUserWithoutPassword.toJSON();
+      data.Posts = data.Posts.length; //개인정보 침해 예방
+      data.Followers = data.Followers.length;
+      data.Followings = data.Followings.length;
+      res.status(200).json(data);
+    } else {
+      res.status(404).json("존재하지 않는 id 입니다.");
     }
   } catch (error) {
     console.error(error);
