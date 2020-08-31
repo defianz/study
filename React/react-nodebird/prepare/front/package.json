@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next -p 3060",
-    "build": "next build"
+    "build": "cross-env ANALYZE=true NODE_ENV=production next build",
+    "start": "cross-env NODE_ENV=production next start -p 3060"
   },
   "author": "Defian",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "antd": "^4.4.2",
     "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.11.1",
+    "cross-env": "^7.0.2",
     "faker": "^4.1.0",
     "immer": "^7.0.7",
     "moment": "^2.27.0",
