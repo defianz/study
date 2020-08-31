@@ -3,14 +3,16 @@ import AppLayout from "../components/AppLayout";
 import Head from "next/head";
 import { Form, Input, Checkbox, Button } from "antd";
 import styled from "styled-components";
-import useinput from "../hooks/useinput";
-import { SIGN_UP_REQUEST } from "../reducers/user";
+import useInput from "../hooks/useInput";
+import { SIGN_UP_REQUEST, LOAD_MY_INFO_REQUEST } from "../reducers/user";
 import { useDispatch, useSelector } from "react-redux";
 import Router from "next/router";
 
 import wrapper from "../store/configureStore";
 import { END } from "redux-saga";
 import axios from "axios";
+
+import { LOAD_POSTS_REQUEST } from "../reducers/post";
 
 const ErrorMessasge = styled.div`
   color: red;
@@ -42,9 +44,9 @@ const Signup = () => {
     }
   }, [isSignUpError]);
 
-  const [email, onChangeEmail] = useinput("");
-  const [nickname, onChangeNickname] = useinput("");
-  const [password, onChangePassword] = useinput("");
+  const [email, onChangeEmail] = useInput("");
+  const [nickname, onChangeNickname] = useInput("");
+  const [password, onChangePassword] = useInput("");
   const [passwordCheck, setPasswordCheck] = useState("");
   const [passwordError, setPasswordError] = useState(false);
   const onChangePasswordCheck = useCallback(

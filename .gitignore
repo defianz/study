@@ -1,8 +1,9 @@
 .DS_Store
 .vscode
-.env
-.next/
 *.log
 *.iml
 temp/
-node_modules/
+react-nodebird.pem
+node_modules
+.env
+.next
