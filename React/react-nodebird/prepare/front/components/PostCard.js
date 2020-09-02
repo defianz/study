@@ -18,6 +18,7 @@ import {
   REMOVE_POST_REQUEST,
   LIKE_POST_REQUEST,
   UNLIKE_POST_REQUEST,
+  UPDATE_POST_REQUEST,
 } from "../reducers/post";
 import FollowButton from "./FollowButton";
 import Link from "next/link";
@@ -33,6 +34,28 @@ const PostCard = ({ post }) => {
   // const [liked, setLiked] = useState(false);
   const [commentFormOpened, setCommentFormOpened] = useState(false);
   const id = useSelector((state) => state.user.me?.id);
+  const [editMode, setEditMode] = useState(false);
+
+  const onClickUpdate = useCallback(() => {
+    setEditMode(true);
+  }, []);
+
+  const onCancelUpdate = useCallback(() => {
+    setEditMode(false);
+  });
+
+  const onChangePost = useCallback(
+    (editText) => () => {
+      dispatch({
+        type: UPDATE_POST_REQUEST,
+        data: {
+          PostId: post.id,
+          content: editText,
+        },
+      });
+    },
+    [post]
+  );
   // ?. 옵셔널 체이닝 : 없으면 undeined
 
   // useEffect(() => {
@@ -112,7 +135,9 @@ const PostCard = ({ post }) => {
               <Button.Group>
                 {id && post.User.id === id ? (
                   <>
-                    <Button>수정</Button>
+                    {!post.RetweetId && (
+                      <Button onClick={onClickUpdate}>수정</Button>
+                    )}
                     <Button
                       type="danger"
                       loading={removePostLoading}
@@ -155,7 +180,13 @@ const PostCard = ({ post }) => {
                 </Link>
               }
               title={post.Retweet.User.nickname}
-              description={<PostCardContent postData={post.Retweet.content} />}
+              description={
+                <PostCardContent
+                  onChangePost={onChangePost}
+                  onCancelUpdate={onCancelUpdate}
+                  postData={post.Retweet.content}
+                />
+              }
             />
           </Card>
         ) : (
@@ -172,7 +203,14 @@ const PostCard = ({ post }) => {
                 </Link>
               }
               title={post.User.nickname}
-              description={<PostCardContent postData={post.content} />}
+              description={
+                <PostCardContent
+                  onChangePost={onChangePost}
+                  editMode={editMode}
+                  onCancelUpdate={onCancelUpdate}
+                  postData={post.content}
+                />
+              }
             />
           </>
         )}

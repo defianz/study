@@ -27,13 +27,14 @@ db.sequelize
 
 passportConfig();
 
+app.set("trust proxy", 1);
 if (process.env.NODE_ENV === "production") {
   app.use(morgan("combined"));
   app.use(hpp());
   app.use(helmet());
   app.use(
     cors({
-      origin: "http://test-defian.tk",
+      origin: "https://test-defian.tk",
       credentials: true, // 쿠키 전달 옵션 : 전달하려면 true (default : false)
     })
   );
@@ -56,11 +57,12 @@ app.use(
     saveUninitialized: false,
     resave: false,
     secret: process.env.COOKIE_SECRET,
-    cookie: {
-      httpOnly: true,
-      secure: false,
-      domain: process.env.NODE_ENV === "production" && ".test-defian.tk",
-    },
+    // proxy: true,
+    // cookie: {
+    //   httpOnly: true,
+    //   secure: true,
+    //   domain: process.env.NODE_ENV === "production" && ".test-defian.tk",
+    // },
   })
 );
 app.use(passport.initialize());
@@ -104,7 +106,7 @@ app.use("/hashtag", hashtagRouter);
 
 // });
 
-app.listen(80, () => {
+app.listen(3065, () => {
   console.log("서버실행중!!");
 });
 // app.listen(3065, () => {
