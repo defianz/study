@@ -7,16 +7,35 @@
  */
 
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, ScrollView, Button} from 'react-native';
+import {
+  TextInput,
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  Button,
+  Image,
+} from 'react-native';
 import Header from './src/header';
 import Generator from './src/generator';
 import NumList from './src/numlist';
 import Input from './src/input';
+import Picker from './src/picker';
+import Android from './assets/images/androidios.png';
+import Modal from './src/modal';
 
 class App extends Component {
   state = {
     appName: 'My First App',
     random: [36, 999],
+    myTextInput: 'asdfasdf',
+    alphabet: ['a', 'b', 'c', 'd'],
+  };
+
+  onChagneInput = event => {
+    this.setState({
+      myTextInput: event,
+    });
   };
 
   onAddRandomNum = () => {
@@ -36,12 +55,24 @@ class App extends Component {
   };
 
   onAddTextInput = () => {
-    alert('hi');
+    this.setState(prevState => ({
+      myTextInput: '',
+      alphabet: [...prevState.alphabet, prevState.myTextInput],
+    }));
   };
 
   render() {
     return (
       <View style={styles.mainView}>
+        <Modal />
+        {/* <Image style={styles.image} source={Android} resizeMode="cover" /> */}
+        {/* <Image
+          style={styles.image}
+          source={{uri: 'https://picsum.photos/id/237/200/300'}}
+          resizeMode="contain"
+          onLoadEnd={() => alert('Image Loaded')}
+        /> */}
+        <Picker />
         {/* <Header name={this.state.appName} />
         <View>
           <Text
@@ -63,8 +94,24 @@ class App extends Component {
           bounces={false}>
           <NumList num={this.state.random} delete={this.onNumDelete} />
         </ScrollView> */}
-        <Input />
-        <Button title="Add Text Input" onpress={this.onAddTextInput} />
+        {/* <TextInput
+          value={this.state.myTextInput}
+          style={styles.input}
+          onChangeText={this.onChagneInput}
+          multiline={true}
+          maxLength={100}
+          autoCapitalize={'none'}
+          editable={true}
+        />
+        <Button title="Add Text Input" onPress={this.onAddTextInput} />
+
+        <ScrollView style={{width: '100%'}}>
+          {this.state.alphabet.map((item, idx) => (
+            <Text style={styles.mainText} key={idx}>
+              {item}
+            </Text>
+          ))}
+        </ScrollView> */}
       </View>
     );
   }
@@ -96,6 +143,20 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     color: 'blue',
     padding: 20,
+    margin: 20,
+    backgroundColor: 'pink',
+  },
+  input: {
+    width: '100%',
+    backgroundColor: '#cecece',
+    marginTop: 20,
+    fontSize: 25,
+    padding: 10,
+  },
+  image: {
+    backgroundColor: 'red',
+    width: '100%',
+    height: 700,
   },
 });
 
