@@ -14,6 +14,12 @@ class TabHomeScreen extends Component {
     return (
       <View style={styles.home}>
         <Text>Home Tab Screen</Text>
+        <Button
+          title="Go to Home Stack Screen"
+          onPress={() => {
+            this.props.navigation.navigate('Home_Stack');
+          }}
+        />
       </View>
     );
   }

@@ -9,7 +9,11 @@
 import 'react-native-gesture-handler';
 import React, {Component} from 'react';
 import {StyleSheet, View, Text, Button, Image} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
+import {
+  NavigationContainer,
+  DrawerActions,
+  useNavigation,
+} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
@@ -21,7 +25,7 @@ import {
 
 import LogoTitle from './src/logo';
 
-import HomeScreen from './src/home';
+import StackHomeScreen from './src/home';
 import UserScreen from './src/user';
 
 import DrawerHomeScreen from './src/home_drawer';
@@ -37,26 +41,72 @@ import TabMessageScreen from './src/message_tab';
 import PictogramUser from './src/assets/pics/user.png';
 import PictogramMessage from './src/assets/pics/message.png';
 
+import Icon from 'react-native-vector-icons/dist/Ionicons';
+import Ionicons from 'react-native-vector-icons/dist/Ionicons';
+import {TouchableOpacity} from 'react-native';
+
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
 
+/*
+  Stack Navigator
+    - Drawer Navigator w/ Drawer Screen C, D, ....
+      - Tab Navigator
+        - Tab Screen F
+        - Tab Screen G
+    - Stack Screen B
+    - Stack Screen C
+
+
+*/
+
+const TabComponent = () => {
+  return (
+    <Tab.Navigator
+      initialRouteName="Home"
+      tabBarOptions={{
+        activeBackgroundColor: 'skyblue',
+        activeTintColor: 'blue',
+        inactiveTintColor: '#fff',
+        style: {
+          backgroundColor: '#c6cbef',
+        },
+        labelPosition: 'below-icon', // beside-icon
+      }}
+      screenOptions={({route}) => ({
+        tabBarLabel: route.name,
+        tabBarIcon: ({focused}) => TabBarIcon(focused, route.name),
+      })}>
+      <Tab.Screen name="Home" component={TabHomeScreen} />
+      <Tab.Screen name="User" component={TabUserScreen} />
+      <Tab.Screen name="Message" component={TabMessageScreen} />
+    </Tab.Navigator>
+  );
+};
+
 const TabBarIcon = (focused, name) => {
   let iconImagePath;
+  let iconName, iconSize;
 
   if (name === 'Home') {
-    iconImagePath = PictogramHome;
+    iconName = 'ios-home';
+    // iconImagePath = PictogramHome;
   } else if (name === 'User') {
-    iconImagePath = PictogramUser;
+    iconName = 'ios-people';
+    // iconImagePath = PictogramUser;
   } else if (name === 'Message') {
-    iconImagePath = PictogramMessage;
+    iconName = 'ios-mail';
+    // iconImagePath = PictogramMessage;
   }
 
+  iconSize = focused ? 30 : 20;
   return (
-    <Image
-      style={{width: focused ? 24 : 20, height: focused ? 24 : 20}}
-      source={iconImagePath}
-    />
+    // <Image
+    //   style={{width: focused ? 24 : 20, height: focused ? 24 : 20}}
+    //   source={iconImagePath}
+    // />
+    <Ionicons name={iconName} size={iconSize} />
   );
 };
 
@@ -74,6 +124,40 @@ const TabBarIcon = (focused, name) => {
 //   );
 // };
 
+const DrawerComponent = () => {
+  return (
+    <Drawer.Navigator
+      initialRouteName="Home"
+      drawerType="front"
+      drawerPosition="right"
+      drawerStyle={{
+        backgroundColor: '#c6cbef',
+        width: 200,
+      }}
+      drawerContentOptions={{
+        activeTintColor: 'red',
+        activeBackgroundColor: 'skyblue',
+      }}
+      drawerContent={props => <SideDrawer {...props} />}>
+      <Drawer.Screen name="Route" component={TabComponent} />
+    </Drawer.Navigator>
+  );
+};
+
+const HeaderRight = () => {
+  const navigation = useNavigation();
+  return (
+    <View style={{flexDirection: 'row', paddingRight: 15}}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.dispatch(DrawerActions.openDrawer());
+        }}>
+        <Text>Open</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+
 class App extends Component {
   // logoTitle = () => {
   //   return (
@@ -87,26 +171,39 @@ class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <Tab.Navigator
-          initialRouteName="Home"
-          tabBarOptions={{
-            activeBackgroundColor: 'skyblue',
-            activeTintColor: 'blue',
-            inactiveTintColor: '#fff',
-            style: {
-              backgroundColor: '#c6cbef',
-            },
-            labelPosition: 'below-icon', // beside-icon
-          }}
-          screenOptions={({route}) => ({
-            tabBarLabel: route.name,
-            tabBarIcon: ({focused}) => TabBarIcon(focused, route.name),
-          })}>
-          <Tab.Screen name="Home" component={TabHomeScreen} />
-          <Tab.Screen name="User" component={TabUserScreen} />
-          <Tab.Screen name="Message" component={TabMessageScreen} />
-        </Tab.Navigator>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Main"
+            component={DrawerComponent}
+            options={{
+              headerRight: ({}) => <HeaderRight />,
+            }}
+          />
+          <Stack.Screen name="Home_Stack" component={StackHomeScreen} />
+        </Stack.Navigator>
       </NavigationContainer>
+
+      // <NavigationContainer>
+      //   <Tab.Navigator
+      //     initialRouteName="Home"
+      //     tabBarOptions={{
+      //       activeBackgroundColor: 'skyblue',
+      //       activeTintColor: 'blue',
+      //       inactiveTintColor: '#fff',
+      //       style: {
+      //         backgroundColor: '#c6cbef',
+      //       },
+      //       labelPosition: 'below-icon', // beside-icon
+      //     }}
+      //     screenOptions={({route}) => ({
+      //       tabBarLabel: route.name,
+      //       tabBarIcon: ({focused}) => TabBarIcon(focused, route.name),
+      //     })}>
+      //     <Tab.Screen name="Home" component={TabHomeScreen} />
+      //     <Tab.Screen name="User" component={TabUserScreen} />
+      //     <Tab.Screen name="Message" component={TabMessageScreen} />
+      //   </Tab.Navigator>
+      // </NavigationContainer>
 
       // <NavigationContainer>
       //   <Drawer.Navigator
