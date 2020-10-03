@@ -8,7 +8,8 @@ const PORT = 8080;
 const app = express();
 
 app.get("/", (req, res) => {
-  res.status(200).send("Hello World");
+  res.status(200).send("안바뀌는거같은데");
 });
 
 app.listen(PORT);
+console.log("server is running");
