@@ -11,16 +11,16 @@ const app = express();
 app.use(bodyParser.json());
 
 //테이블 생성하기
-db.pool.query(
-  `CREATE TABLE lists(
-    id INTEGER AUTO_INCREMENT
-    value TEXT,
-    PRIMARYT KEY (id)
-)`,
-  (err, results, fields) => {
-    console.log("results", results);
-  }
-);
+// db.pool.query(
+//   `CREATE TABLE lists(
+//     id INTEGER AUTO_INCREMENT
+//     value TEXT,
+//     PRIMARYT KEY (id)
+// )`,
+//   (err, results, fields) => {
+//     console.log("results", results);
+//   }
+// );
 
 // DB lists 테이블에 있는 모든 데이터를 프론트 서버에 보내주기
 app.get("/api/values", (req, res) => {
@@ -35,7 +35,7 @@ app.get("/api/values", (req, res) => {
 app.post("/api/value", (req, res, next) => {
   //데이터베이스에 값 넣어주기
   db.pool.query(
-    `INSERT INTO lists (value) VALUES("${req.body.value}"`,
+    `INSERT INTO lists (value) VALUES("${req.body.value}")`,
     (err) => {
       if (err) return res.status(500).send(err);
       else
