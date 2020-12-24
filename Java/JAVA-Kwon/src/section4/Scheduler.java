@@ -1,4 +1,4 @@
-package Scheduler;
+package section4;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -28,7 +28,7 @@ public class Scheduler {
 			} else if(command.equals("list")) {
 				handleList();
 			} else if(command.equals("show")) {
-				
+				handleShow();	
 			} else if(command.equals("sort")) {
 				Arrays.sort(events,0,n);
 			} else if(command.equals("exit")) {
@@ -38,6 +38,17 @@ public class Scheduler {
 		kb.close();
 	}
 	
+	private void handleShow() {
+		String dateString = kb.next();
+		MyDate theDate = parseDateString(dateString);
+		for(int i=0; i<n; i++) {
+			//test if events[i] is relevant to the date, the print it;
+			if (events[i].isRelevant(theDate))
+				System.out.println(events[i].toString());
+			
+		}
+	}
+
 	private void handleList() {
 		for(int i=0;i<n;i++) {
 			System.out.println("   " + events[i].toString()); // dynamic binding
