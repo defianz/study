@@ -1,7 +1,8 @@
-package section2_2;
+package section3;
 
-import section6.MySingleLinkedList;
-import section6.Node;
+import java.util.Iterator;
+
+import section3.MySingleLinkedList;
 
 public class Polynomial {
 	
@@ -43,20 +44,26 @@ public class Polynomial {
 	public int calc (int x ) {
 		int result = 0;
 		
-		Node<Term> p = terms.head;
-		while( p != null) {
-			result += p.data.calc(x);
-			p=p.next;
+//		Node<Term> p = terms.head;
+//		while( p != null) {
+//			result += p.data.calc(x);
+//			p=p.next;
+//		}
+		
+		Iterator<Term> iter = terms.iterator();
+		while(iter.hasNext()) {
+			Term t = iter.next();
+			result += t.calc(x);
 		}
 		return result;
 	}
 	
 	public String toString() {
 		String result = "";
-		Node<Term> p = terms.head;
-		while ( p != null) {
-			result += ("+"+p.data.toString());
-			p=p.next;
+		Iterator<Term> iter = terms.iterator();
+		while ( iter.hasNext() ) {
+			Term t = iter.next();
+			result += ("+"+t.toString());
 		}
 		return result;
 	}
