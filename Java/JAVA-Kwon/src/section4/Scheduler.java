@@ -1,15 +1,12 @@
 package section4;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Scheduler {
 	
 	private int capacity = 10;
-	public ArrayList<Event> events = new ArrayList<>();
-//	public Event [] events = new Event[100];
+	public Event [] events = new Event[100];
 	public int n=0;
 	private Scanner kb;
 
@@ -33,7 +30,7 @@ public class Scheduler {
 			} else if(command.equals("show")) {
 				handleShow();	
 			} else if(command.equals("sort")) {
-				Collections.sort(events);
+				Arrays.sort(events,0,n);
 			} else if(command.equals("exit")) {
 				break;
 			}
@@ -44,18 +41,17 @@ public class Scheduler {
 	private void handleShow() {
 		String dateString = kb.next();
 		MyDate theDate = parseDateString(dateString);
-		for(Event ev : events) {
+		for(int i=0; i<n; i++) {
 			//test if events[i] is relevant to the date, the print it;
-			if (ev.isRelevant(theDate))
-				System.out.println(ev.toString());
+			if (events[i].isRelevant(theDate))
+				System.out.println(events[i].toString());
 			
 		}
 	}
 
 	private void handleList() {
-//		for(int i=0;i<events.size();i++) {
-		for(Event ev : events) { // enhanced for Loop
-			System.out.println("   " + ev.toString()); // dynamic binding
+		for(int i=0;i<n;i++) {
+			System.out.println("   " + events[i].toString()); // dynamic binding
 		}
 	}
 
@@ -84,22 +80,22 @@ public class Scheduler {
 	}
 
 	private void addEvent(OneDayEvent ev) {
-//		if( n>=capacity)
-//			reallocate();
+		if( n>=capacity)
+			reallocate();
 		
-		events.add(ev);
+		events[n++]=ev;
 		
 	}
 
-//	private void reallocate() {
-//		Event [] tmp = new Event [ capacity * 2];
-//		for(int i=0; i<events.size(); i++) {
-//			tmp[i] = events.get(i);
-//		}
-//		events = tmp;
-//		capacity *= 2;
-//		
-//	}
+	private void reallocate() {
+		Event [] tmp = new Event [ capacity * 2];
+		for(int i=0; i<n; i++) {
+			tmp[i] = events[i];
+		}
+		events = tmp;
+		capacity *= 2;
+		
+	}
 
 	private MyDate parseDateString(String dateString) {
 		String [] tokens = dateString.split("/");
